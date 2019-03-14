@@ -1,3 +1,29 @@
+# 1 The Real and Complex Number Systems
+
+
+## Ordered Sets
+
+
+### 1.6 Definition
+An **ordered set** is a set $S$ in which an order is defined.
+
+### 1.8 Definition
+Suppose $S$ is an ordered set, $E \subset S$, and $E$ is bounded above. Suppose there exists an $\alpha \in S$ with the following properties:
+1. $\alpha$ is an upper bound of E.
+2. If $\gamma < \alpha$ then $\gamma$ is not an upper bound of $E$.
+
+Then $\alpha$ is called the **least upper bound** of $E$ or the **supremum** of $E$, and we write
+
+$\alpha = \sup E$.
+
+The **greatest lower bound**, or **infimum**, of a set $E$ which is bounded below is defined in the same manner: The statement
+
+$\alpha = \inf E$.
+
+means that $\alpha$ is a lower bound of $E$ and that no $\beta$ with $\beta > \alpha$ is a lower bound of $E$.
+
+
+
 # 2 Basic Topology
 
 
@@ -67,6 +93,11 @@ Let $X$ be a metric space. All points and sets mentioned below are understood to
 9. $E$ is **bounded** if there is a real number $M$ and a point $q \in X$ such that $d(p, q) < M$ for all $p \in E$.
 10. $E$ is **dense** in $X$ if every point of $X$ is a limit point of $E$, or a point of $E$ (or both).
 
+### 2.23 Theorem 
+A set $E$ is open if and only if its complement is closed.
+
+**Corollary** A set $F$ is closed if and only if its complement is open.
+
 ### 2.26 Definition 
 If X is a metric space, if $E \subset X$, and if $E'$ denotes the set of all limit points of $E$ in $X$, then the **closure** of $E$ is the set $\bar{E} = E \cup E'$.
 
@@ -74,7 +105,7 @@ If X is a metric space, if $E \subset X$, and if $E'$ denotes the set of all lim
 If $X$ is a metric space and $E \subset X$, then
 1. $\bar{E}$ is closed,
 2. $E = \bar{E}$ if and only if $E$ is closed,
-3. ${E} \subset F$ for every closed set $F \subset X$ such that $\bar{E} \subset F$.
+3. $E \subset F$ for every closed set $F \subset X$ such that $\bar{E} \subset F$.
 
 ### 2.28 Theorem
 Let $E$ be a nonempty set of real numbers which is bounded above. Let $y = \sup E$. Then $y \in \bar{E}$. Hence $y \in E$ if $E$ is closed.
