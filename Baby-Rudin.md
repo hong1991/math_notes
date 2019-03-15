@@ -7,6 +7,11 @@
 ### 1.6 Definition
 An **ordered set** is a set $S$ in which an order is defined.
 
+### 1.7 Definition
+Suppose $S$ is an ordered set, and $E \subset S$. If there exists a $\beta \in S$ such that $x \le \beta$ for every $x \in E$, we say that $E$ is **bounded above**, and call $\beta$ an **upper bound** of $E$.
+
+Lower bounds are defined in the same way (with $\ge$ in place of $\le$).
+
 ### 1.8 Definition
 Suppose $S$ is an ordered set, $E \subset S$, and $E$ is bounded above. Suppose there exists an $\alpha \in S$ with the following properties:
 1. $\alpha$ is an upper bound of E.
@@ -132,7 +137,12 @@ If a set $E$ in $R^k$ has one of following three properties, then it has the oth
 2. $E$ is compact.
 3. Every infinite subset of $E$ has a limit point in $E$.
 
+
 # 4 Continuity
+
+
+## Limits of Functions
+
 
 ### 4.1 Definition 
 Let $X$ and $Y$ be metric spaces; suppose $E \subset X$, $f$ maps $E$ into $Y$, and $p$ is a limit point of $E$. We write $f(x) \to q$ as $x \to p$, or 
@@ -175,6 +185,13 @@ $M = \sup\limits_{p \in x} f(p)$, $m = \inf\limits_{p \in X} f(p)$.
 
 Then there exist point $p, q \in X$ such that $f(p) = M$ and $f(q) = m$.
 
+### 4.33 Definition
+Let $f$ be a real function defined on $E \subset R$. We say that
+
+$f(t) \to A$ as $t \to x$,
+
+where $A$ and $x$ are in the extended real number system, if for every neighborhood $U$ of $A$ there is a neighborhood $V$ of $x$ such that $V \cap E$ is not empty, and such that $f(t) \in U$ for all $t \in V \cap E$, $t \ne x$.
+
 # 5 Differentiation
 
 ## The Derivative of a Real Function
@@ -212,7 +229,7 @@ In 3, we assume of course that $g(x) \ne 0$.
 ## Mean Value Theorems
 
 ### 5.7 Definition
-Let $f$ be a real function on a metric space $X$. We say that $f$ has a *local maximum* at a point $p \in X$ if there exists $\delta > 0$ such that $f(q) \le f(p)$ for all $q \in X$ with $d(p, q) < \delta$.
+Let $f$ be a real function on a metric space $X$. We say that $f$ has a **local maximum** at a point $p \in X$ if there exists $\delta > 0$ such that $f(q) \le f(p)$ for all $q \in X$ with $d(p, q) < \delta$.
 
 Local minima are defined likewise.
 
