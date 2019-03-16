@@ -137,6 +137,33 @@ If a set $E$ in $R^k$ has one of following three properties, then it has the oth
 2. $E$ is compact.
 3. Every infinite subset of $E$ has a limit point in $E$.
 
+---
+
+
+# 3 Numberical Sequences and Series
+
+
+## Convergent Sequences
+
+
+### 3.1 Definition
+A sequence ${p_n}$ in a metric space X is said to **converge** if there is a point $p \in X$ with the following property: For every $\epsilon > 0$ there is an integer $N$ such that $n \ge N$ implies that $d(p_n, p) < \epsilon$. (Here $d$ denotes the distance in $X$.)
+
+In this case we also say that $\{p_n\}$ converges to $p$, or that $p$ is the limit of $\{p_n\}$, and we write $p_n \to p$, or
+
+$\lim\limits_{x \to \infty}p_n = p$.
+
+If ${p_n}$ does not converge, it is said to **diverge**.
+
+### 3.2 Theorem
+Let $\{p_n\}$ be a sequence in a metric space $X$.
+1. $\{p_n\}$ converges to $p \in X$ if and only if every neighborhood of $p$ contains $p_n$ for all but finitely many $n$.
+2. If $p \in X$, $p' \in X$, and if $\{p_n\}$ converges to $p$ and to $p'$, then $p' = p$.
+3. If $\{p_n\}$ converges, then $\{p_n\}$ is bounded.
+4. If $E \subset X$ and if $p$ is a limit point of $E$, then there is a sequence $\{p_n\}$ in $E$ such that $p = \lim\limits_{x \to \infty}p_n$.
+
+---
+
 
 # 4 Continuity
 
@@ -153,9 +180,32 @@ if there is a point $q \in Y$ with the following property: For every $\epsilon \
 
 $d_{r}(f(x), q) \lt \epsilon$
 
-for all points $x \lt E$ for which
+for all points $x \in E$ for which
 
 $0 \lt d_{x}(x, p) \lt \delta$.
+
+### 4.2 Theorem
+Let $X$, $Y$, $E$, $f$, and $p$ be as in Definition 4.1. Then
+
+$\lim\limits_{x \to p}f(x) = q$
+
+if and only if
+
+$\lim\limits_{x \to \infty}f(p_n) = q$
+
+for every sequence{p_n} in $E$ such that
+
+$p_n \ne p$, $\lim\limits_{x \to \infty}p_n = p$.
+
+### 4.4 Theorem
+Suppose $E \subset X$, a metric space, $p$ is a limit point of $E$, $f$ and $g$ are complex functions on $E$, and
+
+$\lim\limits_{x \to p}f(x) = A$, $\lim\limits_{x \to p}g(x) = B$.
+
+Then
+1. $\lim\limits_{x \to p}(f+g)(x) = A + B$;
+2. $\lim\limits_{x \to p}(fg)(x) = AB$;
+3. $\lim\limits_{x \to p}(\frac{f}{g})(x) = \frac{A}{B}$, if $B \ne 0$.
 
 
 ## Continuous Functions
@@ -192,9 +242,13 @@ $f(t) \to A$ as $t \to x$,
 
 where $A$ and $x$ are in the extended real number system, if for every neighborhood $U$ of $A$ there is a neighborhood $V$ of $x$ such that $V \cap E$ is not empty, and such that $f(t) \in U$ for all $t \in V \cap E$, $t \ne x$.
 
+---
+
 # 5 Differentiation
 
+
 ## The Derivative of a Real Function
+
 
 ### 5.1 Definition
 Let $f$ be defined (and real-valued) on $[a, b]$. For any $x \in [a, b]$ form the quotient
