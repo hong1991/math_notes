@@ -120,13 +120,16 @@ Let $E$ be a nonempty set of real numbers which is bounded above. Let $y = \sup 
 
 
 ### 2.31 Definition
-By an **open cover** of a set $E$ in a metric space $X$ we mean a collection $\{G_\alpha\}$ of open subsets of $X$ such that $E \subset \cup_\alpha G_\alpha$.
+By an **open cover** of a set $E$ in a metric space $X$ we mean a collection $\{G_\alpha\}$ of open subsets of $X$ such that $E \subset \bigcup_\alpha G_\alpha$.
 
 ### 2.32 Definition
 A subset $K$ of a metric space $X$ is said to be **compact** if every open cover of $K$ contains a *finite* subcover.
 
+### 2.38 Theorem
+If $\{I_n\}$ is a sequence of intervals in $R^1$, such that $I_n \supset I_{n+1}$ $(n = 1,2,3,...)$, then $\bigcap_1^\infty I_n$ is not empty.
+
 ### 2.39 Theorem 
-Let $k$ be a positive integer. If $\{I_n\}$ is a sequence of k
+Let $k$ be a positive integer. If $\{I_n\}$ is a sequence of $k$-cells such that $I_n \supset I_{n+1}$ $(n = 1,2,3,...)$, then $\bigcap_1^\infty I_n$ is not empty.
 
 ### 2.40 Theorem 
 Every $k$-cell is compact.
@@ -136,6 +139,8 @@ If a set $E$ in $R^k$ has one of following three properties, then it has the oth
 1. $E$ is closed and bounded.
 2. $E$ is compact.
 3. Every infinite subset of $E$ has a limit point in $E$.
+
+**Proof** If 1. holds, then $E \subset I$ for some $k$-cell $I$, and 2. follows from Theorms 2.40
 
 ---
 
@@ -217,7 +222,28 @@ $d_Y(f(x), f(p) < \epsilon$
 
 for all points $x \in E$ for which $d_X(x, p) < \delta$.
 
-If $f$ is continuous at every point of E, then f is said to be continuous on $E$.
+If $f$ is continuous at every point of E, then f is said to be **continuous** on $E$.
+
+### 4.6 Theorem
+In the situation given in Definition 4.5, assume also that $p$ is a limit point of $E$. Then $f$ is continuous at $p$ if and only if $\lim_{x \to p}f(x) = f(p))$.
+
+### 4.7 Theorem
+Suppose $X$, $Y$, $Z$ are metric spaces, $E \subset X$, $f$ maps $E$ into $Y$, $g$ maps the range of $f$, $f(E)$, into $Z$, and h is the mapping of $E$ into $Z$ defined by
+
+$h(x) = g(f(x))$ $(x \in E)$.
+
+If $f$ is coninuous at a point $p \in E$ and if $g$ is continuous at the point $f(p)$, then $h$ is continuous at $p$.
+
+This function $h$ is called the **composition** or the **composite** of $f$ and $g$. The notation
+
+$h = g \circ f$
+
+is frequently used in this context.
+
+### 4.9 Theorem
+Let $f$ and $g$ be complex continuous functions on a metric space $X$. Then $f+g$, $fg$, and $f/g$ are continuous on $X$.
+
+In the last case, we must of course assume that $g(x) \ne 0$, for all $x \in X$.
 
 
 ## Continuity and Compactness
@@ -290,7 +316,7 @@ Local minima are defined likewise.
 ### 5.8 Theorem
 Let $f$ be defined on $[a, b]$; if $f$ has a local maximum at a point $x \in (a, b)$, and if $f'(x)$ exists, then $f'(x) = 0$.
 
-### 5.9 Theorem **Generalized Mean Value Theorems**
+### 5.9 Theorem **Generalized Mean Value Theorem**
 If $f$ and $g$ are continuous real functions on $[a, b]$ which are differentiable in $(a, b)$, then there is a point $x \in (a, b)$ at which
 
 $[f(b)-f(a)]g'(x) = [g(b)-g(a)]f'(x)$.
@@ -307,4 +333,9 @@ $h(a) = f(b)g(a) - f(a)g(b) = h(b)$.
 
 To prove the theorem, we have to show that $h'(x) = 0$ for some $x \in (a, b)$.
 
-If $h$ is constant, this holds for every $x \in (a, b)$. If $h(t) > h(a)$ for some $t \in (a, b)$, let $x$ be a point on $[a, b]$ at which $h$ attains its maximum
+If $h$ is constant, this holds for every $x \in (a, b)$. If $h(t) > h(a)$ for some $t \in (a, b)$, let $x$ be a point on $[a, b]$ at which $h$ attains its maximum (Theorem 4.16). By $h(a) = f(b)g(a) - f(a)g(b) = h(b)$, and Theorem 5.8 shows that $h'(x) = 0$. If $h(t) < h(a)$ for some $t \in (a, b)$, the same argument applies if we choose for $x$ a point on $[a, b]$ where $h$ attains its minimum.
+
+### 5.10 Theorem **Mean Value Theorem**
+If $f$ is a real continuous function on $[a, b]$ which is differentiable in $(a, b)$, then there is a point $ x \in (a, b)$ at which
+
+$f(b) - f(a) = (b - a)f'(x)$.
