@@ -28,6 +28,28 @@ $\alpha = \inf E$.
 means that $\alpha$ is a lower bound of $E$ and that no $\beta$ with $\beta > \alpha$ is a lower bound of $E$.
 
 
+## The Extended Real Number System
+
+
+### 1.23 Definition 
+The extended real number system consists of the real field R and two symbols, $+\infty$ and $-\infty$. We preserve the original order in R, and define
+
+$-\infty < x < +\infty$
+
+for every $x \in R$.
+
+It is then clear that $+\infty$ is an upper bound of every subset of the extended real number system, and that every nonempty subset has a leat upper bound. If, for example, $E$ is a nonempty set of real numbers which is not bounded above in R, then sup $E = +\infty$ in the extended real number system.
+
+Exactly the same remarks apply to lower bounds.
+
+The extended real number system does not form a field, but it is customary to make the following conventions:
+1. If $x$ is real then $x+\infty=+\infty$, $x-\infty=-\infty$, $\frac x {+\infty} = \frac x {-\infty} = 0$.
+2. If $x > 0$ then $x \cdot (+\infty) = +\infty$, $x \cdot (-\infty) = -\infty$.
+3. If $x < 0$ then $x \cdot (+\infty) = -\infty$, $x \cdot (-\infty) = +\infty$.
+
+When it is desired to make the distinction between real numbers on the one hand the symbols $+\infty$ and $-\infty$ on the other quite explicit, the former are called **finite**.
+
+
 
 # 2 Basic Topology
 
@@ -166,6 +188,74 @@ Let $\{p_n\}$ be a sequence in a metric space $X$.
 2. If $p \in X$, $p' \in X$, and if $\{p_n\}$ converges to $p$ and to $p'$, then $p' = p$.
 3. If $\{p_n\}$ converges, then $\{p_n\}$ is bounded.
 4. If $E \subset X$ and if $p$ is a limit point of $E$, then there is a sequence $\{p_n\}$ in $E$ such that $p = \lim\limits_{x \to \infty}p_n$.
+
+
+## Subsequences
+
+
+### 3.5 Definition
+Given a sequence $\{p_n\}$, consider a sequence $\{n_k\}$ of positive integers, such that $n_1 < n_2 < n_3 < \cdots$. then the sequence $\{p_{n_i}\}$ is called a **subsequence** of $\{p_n\}$. If $\{p_{n_i}\}$ converges, its limit is called a **subsequential limit** of $\{p_n\}$.
+
+
+## Upper and Lower Limits
+
+
+### 3.15 Definition 
+Let $\{s_n\}$ be a sequence of real numbers with the following property: For every real $M$ there is an integer $N$ such that $n \ge N$ implies $s_n \ge M$. We then write
+
+$s_n \to +\infty$.
+
+Similarly, if for every real $M$ there is an integer $N$ such that $n \ge N$ implies $s_n \le M$, we write
+
+$s_n \to -\infty$.
+
+
+### 3.16 Definition
+Let $\{s_n\}$ be a sequence of real numbers. Let $E$ be the set of numbers $x$ (in the extended real number system) such that $s_{n_k} \to x$ for some subsequence $\{s_{n_k}\}$
+
+
+## Series
+
+
+### 3.21 Definition
+Given a sequence $\{a_n\}$, we use the notation
+
+$\sum\limits_{n = p}^q a_n$ $(p \le q)$
+
+to denote the sum $a_p + q_{p+1} + ... + a_q$. With $\{a_n\}$ we associate a sequence $\{s_n\}$, where
+
+$s_n = \sum\limits_{k=1}^n a_k$.
+
+For $\{s_n\}$ we also use the symbolic expression
+
+$a_1 + a_2 + a_3 + ...$
+
+or, more concisely,
+
+**(Symbol Series 1)** $\sum\limits_{n=1}^\infty a_n$.
+
+The (Symbol Series) we call an **infinite series**, or just a **series**. The numbers $s_n$ are called the **partial sums** of the series. If $\{s_n\}$ converges to $s$, we say that the series **converges**, and write
+
+$\sum\limits_{n=1}^\infty a_n = s$.
+
+The number $s$ is called the sum of the series; but it should be clearly understood that $s$ is the limit of a sequence of sums, and is not obtained simply by addition.
+
+If $\{s_n\}$ diverges, the series is saied to diverge.
+
+Sometimes for convenience of notation, we shall consider series of the form
+
+**(Symbol Series 2)** $\sum\limits_{n=0}^\infty a_n$.
+
+And frequently, when there is no possible ambiguity, or when the distinction is immaterial, we shall simply write $\sum a_n$ in place of (Symbol Series 1) or (Symbol Series 2).
+
+
+
+
+## The Root and Ratio Tests
+
+
+### 3.33 Theorem **Root Test**
+Given $\sum a_n$, put $\alpha = \mathop{\lim \sup}\limits_{n \to \infty}\sqrt[n]{\left|a_n\right|}$.
 
 ---
 
@@ -339,3 +429,33 @@ If $h$ is constant, this holds for every $x \in (a, b)$. If $h(t) > h(a)$ for so
 If $f$ is a real continuous function on $[a, b]$ which is differentiable in $(a, b)$, then there is a point $ x \in (a, b)$ at which
 
 $f(b) - f(a) = (b - a)f'(x)$.
+
+
+# 8 Some Special Functions
+
+
+## The Exponential and Logarithmic Functions
+
+We define
+
+**(equation 1)** $E(z) = \sum\limits_{n=0}^\infty \frac {z_n} {n!}$
+
+The ratio test shows that
+
+
+## The Trigonometric Functions
+
+Let us define
+
+$C(x) = \frac 1 2 [E(ix)+E(ix)]$, 
+
+
+## Fourier Series
+
+
+### 8.9 Definition
+A **trigonometric polynomial** is a finite sum of the form
+
+$f(x) = a_0 + \sum\limits_{n=1}^N(a_n\cos nx + b_n\sin nx)$ (x real),
+
+where $a_0,...,a_N,b_1,...,b_N$ are complex numbers. On account of the identities
