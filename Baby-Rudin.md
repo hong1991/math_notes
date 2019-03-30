@@ -197,6 +197,10 @@ Let $\{p_n\}$ be a sequence in a metric space $X$.
 Given a sequence $\{p_n\}$, consider a sequence $\{n_k\}$ of positive integers, such that $n_1 < n_2 < n_3 < \cdots$. then the sequence $\{p_{n_i}\}$ is called a **subsequence** of $\{p_n\}$. If $\{p_{n_i}\}$ converges, its limit is called a **subsequential limit** of $\{p_n\}$.
 
 
+### 3.7 Theorem
+The subsequential limits of a sequence $\{p_n\}$ in a metric space $X$ form a closed subset of $X$.
+
+
 ## Upper and Lower Limits
 
 
@@ -211,7 +215,27 @@ $s_n \to -\infty$.
 
 
 ### 3.16 Definition
-Let $\{s_n\}$ be a sequence of real numbers. Let $E$ be the set of numbers $x$ (in the extended real number system) such that $s_{n_k} \to x$ for some subsequence $\{s_{n_k}\}$
+Let $\{s_n\}$ be a sequence of real numbers. Let $E$ be the set of numbers $x$ (in the extended real number system) such that $s_{n_k} \to x$ for some subsequence $\{s_{n_k}\}$. This set $E$ contains all subsequential limits as defined in Definition 3.5, plus possibly the numbers $+\infty$, $-\infty$.
+
+We now recall Definition 1.8 and Definition 1.23 and put
+
+$s^* = \sup E$,
+
+$s_* = \inf E$.
+
+The numbers $s^*$, $s_*$ are called the **upper limit** and **lower limit** of $\{s_n\}$; we use the notation
+
+$\mathop{\lim \sup}\limits_{n \to \infty} s_n = s^*$, $\mathop{\lim \inf}\limits_{n \to \infty} s_n = s_*$.
+
+
+## 3.17 Theorem
+Let $\{s_n\}$ be a sequence of real numbers. Let $E$ and $s^*$ have the same meaning as in Definition 3.16. Then $s^*$ has the following two properties:
+1. $s^* \in E$.
+2. If $x > s^*$, there is a integer $N$ such that $n \ge N$ implies $s_n < x$.
+
+Moreover, $s^*$ is the only number with the properties 1 and 2.
+
+Of course, an analogous result is true for $s_*$.
 
 
 ## Series
@@ -256,6 +280,17 @@ And frequently, when there is no possible ambiguity, or when the distinction is 
 
 ### 3.33 Theorem **Root Test**
 Given $\sum a_n$, put $\alpha = \mathop{\lim \sup}\limits_{n \to \infty}\sqrt[n]{\left|a_n\right|}$.
+
+Then
+1. if $\alpha < 1$, $\sum a_n$ converges;
+2. if $\alpha > 1$, $\sum a_n$ diverges;
+3. if $\alpha = 1$, the test gives no information.
+
+
+### 3.34 Theorem **Ratio Test**
+The series $\sum a_n$
+1. converges if $\mathop{\lim \sup}\limits_{n \to \infty} \lvert\frac {a_{n+1}} {a_n}\rvert < 1$,
+2. diverges if $\frac {a_{n+1}} {a_n} \ge 1$ for all $n \ge n_0$, where $n_0$ is some fixed integer.
 
 ---
 
@@ -438,9 +473,9 @@ $f(b) - f(a) = (b - a)f'(x)$.
 
 We define
 
-**(equation 1)** $E(z) = \sum\limits_{n=0}^\infty \frac {z_n} {n!}$
+**(equation 1)** $E(z) = \sum\limits_{n=0}^\infty \frac {z^n} {n!}$
 
-The ratio test shows that
+The ratio test shows that this series converges for every complex $z$.
 
 
 ## The Trigonometric Functions
