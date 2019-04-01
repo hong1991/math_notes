@@ -28,6 +28,14 @@ $\alpha = \inf E$.
 means that $\alpha$ is a lower bound of $E$ and that no $\beta$ with $\beta > \alpha$ is a lower bound of $E$.
 
 
+### 1.0 Definition
+An ordered set $S$ is said to have the **least-upper-bound property** if the following is true:
+
+If $E \subset S$, $E$ is not empty, and $E$ is bounded above, then sup $E$ exists in $S$.
+
+We shall now show that there is a close relation between greatest lower bound and least upper bounds. and that every least-upper-bound property also has the greates-lower-bound property.
+
+
 ## The Extended Real Number System
 
 
@@ -48,6 +56,13 @@ The extended real number system does not form a field, but it is customary to ma
 3. If $x < 0$ then $x \cdot (+\infty) = -\infty$, $x \cdot (-\infty) = +\infty$.
 
 When it is desired to make the distinction between real numbers on the one hand the symbols $+\infty$ and $-\infty$ on the other quite explicit, the former are called **finite**.
+
+
+## Appendix **Construct $R$ from $Q$**
+### Step 1 
+The members of $R$ will be certain subset of $Q$, called **cuts**. A cut is, by definition, any set $\alpha \subset Q$ with the following three properties.
+1. $\alpha$ is not empty, and $\alpha \ne Q$.
+2. 
 
 
 
