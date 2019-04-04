@@ -62,7 +62,21 @@ When it is desired to make the distinction between real numbers on the one hand 
 ### Step 1 
 The members of $R$ will be certain subset of $Q$, called **cuts**. A cut is, by definition, any set $\alpha \subset Q$ with the following three properties.
 1. $\alpha$ is not empty, and $\alpha \ne Q$.
-2. 
+2. If $p \in \alpha$, $q \in Q$, and $q < p$, then $q \in \alpha$.
+3. If $p \in \alpha$, then $p < r$ for some $r \in alpha$.
+
+The letters $p, q, r, \dots$ will always denote rational numbers, and $\alpha, \beta, \gamma, \dots$ will denote cuts.
+
+### Step 2
+Define "$\alpha < \beta$" to mean: $\alpha$ is a proper subset of $\beta$.
+
+### Step 3
+The ordered set $R$ has the least-upper-bound property.
+
+### Step 4
+If $\alpha \in R$ and $\beta \in R$ we define $\alpha + \beta$ to be the set of all sums $r + s$, where $r \in \alpha$ and $s \in \beta$.
+
+### Step 5
 
 
 
@@ -216,6 +230,19 @@ Given a sequence $\{p_n\}$, consider a sequence $\{n_k\}$ of positive integers, 
 The subsequential limits of a sequence $\{p_n\}$ in a metric space $X$ form a closed subset of $X$.
 
 
+## Cauchy Sequences
+
+### 3.8 Definition
+A sequence $\{p_n\}$ in a metric space X is said to be a **Cauchy sequence** if for every $\epsilon > 0$ there is an integer $N$ such that $d(p_n, p_m) < \epsilon$ if $n \ge N$ and $m \ge N$.
+
+### 3.9 Definition
+Let $E$ be a nonempty subset of a metric space $X$, and let $S$ be the set of all real numbers of the form $d(p, q)$, with $p \in E$ and $q \in E$. The sup of $S$ is called the **diameter** of $E$.
+
+### 3.10 Theorem
+1. If $\bar{E}$ is the closure of a set $E$ in a metric space $X$, then $diam \bar{E}$ = diam E$.
+2. If $K_n$ is a sequence of compact sets in $X$ such that $K_n \supset K_{n+1}$ $(n = 1,2,3,\dots)$ and if $\lim\limits_{n \to \infty} diam K_n = 0$, then $\bigcap_1^{\infty}K_n$ consists of exactly one point.
+
+
 ## Upper and Lower Limits
 
 
@@ -243,7 +270,7 @@ The numbers $s^*$, $s_*$ are called the **upper limit** and **lower limit** of $
 $\mathop{\lim \sup}\limits_{n \to \infty} s_n = s^*$, $\mathop{\lim \inf}\limits_{n \to \infty} s_n = s_*$.
 
 
-## 3.17 Theorem
+### 3.17 Theorem
 Let $\{s_n\}$ be a sequence of real numbers. Let $E$ and $s^*$ have the same meaning as in Definition 3.16. Then $s^*$ has the following two properties:
 1. $s^* \in E$.
 2. If $x > s^*$, there is a integer $N$ such that $n \ge N$ implies $s_n < x$.
