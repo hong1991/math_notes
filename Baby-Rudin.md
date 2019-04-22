@@ -1,8 +1,33 @@
 # 1 The Real and Complex Number Systems
 
 
+## Introduction
+
+### 1.3 Definition
+If $A$ is any set (whose elements may be numbers or any other objects), we write $x \in A$ to indicate that $x$ is a member (or an element) of $A$.
+
+If $x$ is not a member of $A$, we write: $x \notin A$.
+
+The set which contains no element will be called the **empty set**. If a set has at least one element, it is called **nonempty**.
+
+If $A$ and $B$ are sets, and if every element of $A$ is an element of $B$, we say that $A$ is a subset of $B$, and write $A \subset B$, or $B \supset A$. If, in addtion, there is an element of $B$ which is not in $A$, then $A$ is said to be a **proper** subset of $B$. Note that $A \subset A$ for every set $A$.
+
+If $A \subset B$ and $B \subset A$, we write $A = B$. Otherwise $A \ne B$.
+
+
 ## Ordered Sets
 
+### 1.5 Definition
+Let $S$ be a set. An **order** on $S$ is a relation, denoted by $<$, with the following two properties:
+
+1. If $x \in S$ and $y \in S$ then one and only one of the satements $x < y$, $x = y$, $x > y$ is true.
+2. If $x, y, z \in S$, If $x < y$ and $y < z$, then $x < z$.
+
+The statement "$x < y$" may be read as "$x$ is less than $y$" or "$x$ is smaller then $y$" or "$x$ precedes $y$".
+
+It is often convenient to write $y > x$ in place of $x < y$.
+
+The notation $x \ne y$ indicates that $x < y$ or $x = y$, without specifying which of these two is to hold. In other world, $x \ne y$ is the negation of $x > y$.
 
 ### 1.6 Definition
 An **ordered set** is a set $S$ in which an order is defined.
@@ -28,12 +53,19 @@ $\alpha = \inf E$.
 means that $\alpha$ is a lower bound of $E$ and that no $\beta$ with $\beta > \alpha$ is a lower bound of $E$.
 
 
-### 1.0 Definition
+### 1.10 Definition
 An ordered set $S$ is said to have the **least-upper-bound property** if the following is true:
 
 If $E \subset S$, $E$ is not empty, and $E$ is bounded above, then sup $E$ exists in $S$.
 
-We shall now show that there is a close relation between greatest lower bound and least upper bounds. and that every least-upper-bound property also has the greates-lower-bound property.
+### 1.11 Theorem
+Suppose $S$ is an ordered set with the least-upper-bound property, $B \subset S$, $B$ is not empty, and $B$ is bounded below. Let $L$ be the set of all lower bounds of $B$. Then
+
+$\alpha = \sup L$
+
+exists in $S$, and $\alpha = \inf B$.
+
+In particular, $\inf B$ exists in $S$.
 
 
 ## The Extended Real Number System
