@@ -68,6 +68,66 @@ exists in $S$, and $\alpha = \inf B$.
 In particular, $\inf B$ exists in $S$.
 
 
+## Fields
+
+### 1.12 Definition
+A **field** is a set $F$ with two operations, called **addition** and **multiplication**, which satisfy the following so-called "field axioms" (A), (M), and (D):
+
+#### (A) Axioms for addition
+1. If $x \in F$ and $y \in F$, then their sum $x + y$ is in $F$.
+2. Addition is commutative: $x + y = y + x$ for all $x, y \in F$.
+3. Addition is associative: $(x + y) + z = x + (y + z)$ for all $x, y, z \in F$.
+4. $F$ contains an element $0$ such that $0 + x = x$ for every $x \in F$.
+5. To every $x \in F$ corresponds an element $-x \in F$ such that $x + (-x) = 0$.
+
+#### (M) Axioms for multiplication
+1. If $x \in F$ and $y \in F$, then their product $xy$ is in $F$.
+2. Multiplication is commutative: $xy = yx$ for all $x, y \in F$.
+3. Multiplication is associative: $(xy)z = x(yz)$ for all $x, y, z \in F$.
+4. $F$ contains an element $1 \ne 0$ such that $1x = x$ for every $x \in F$.
+5. If $x \in F$ and $x \ne 0$ then there exists an element $1/x \in F$ such that $x\cdot(1/x) = 1$.
+
+#### (D) The Distributive Law 
+$x(y + z) = xy + xz$ holds for all $x, y, z \in F$.
+
+
+### 1.14 Proposition
+The axioms for addition imply the following statements.
+1. If $x + y = x + z$ then $y = z$.
+2. If $x + y = x$ then $y = 0$.
+3. If $x + y = 0$ then $x = -x$.
+4. $-(-x) = x$.
+
+### 1.15 Proposition
+The axioms for multiplication imply the following statements.
+1. If $x \ne 0$ and $xy = xz$ then $y = z$.
+2. If $x \ne 0$ and $xy = x$ then $y = 1$.
+3. If $x \ne 0$ and $xy = 1$ then $y = 1/x$.
+4. If $x \ne 0$ then $1/(1/x) = x$.
+
+### 1.16 Proposition
+The field axioms imply the following statements, for any $x, y, z \in F$.
+1. 0x = 0.
+2. If $x \ne 0$ and $y \ne 0$ then $xy \ne 0$.
+3. $(-x)y = -(xy) = x(-y)$.
+4. $(-x)(-y) = xy$.
+
+### 1.17 Definition
+An **ordered field** is a **field** $F$ which is also an **ordered set**, such that
+1. $x + y < x + z$ if $x, y, z \in F$ and $y < z$,
+2. $xy > 0$ If $x \in F$, $y \in F$, $x > 0$, and $y > 0$.
+
+If $x > 0$, we call x **positive**; if $x < 0$, $x$ is **negative**.
+
+### 1.18 Proposition
+The following statements are true in every ordered field.
+1. If $x > 0$ then $-x < 0$, and vice versa.
+2. If $x > 0$ and $y < z$ then $xy < xz$.
+3. If $x < 0$ and $y < z$ then $xy > xz$.
+4. If $x \ne 0$ then $x^2 > 0$. In particular, $1 > 0$.
+5. If $0 < x < y$ then $0 < 1/y < 1/x$.
+
+
 ## The Extended Real Number System
 
 
@@ -366,6 +426,24 @@ The series $\sum a_n$
 1. converges if $\mathop{\lim \sup}\limits_{n \to \infty} \lvert\frac {a_{n+1}} {a_n}\rvert < 1$,
 2. diverges if $\frac {a_{n+1}} {a_n} \ge 1$ for all $n \ge n_0$, where $n_0$ is some fixed integer.
 
+
+## Power Series
+
+
+### 3.38 Definition
+Given a sequence $\{c_n\}$ of complex numbers, the series
+
+$\sum\limits_{n=0}^\infty c_nz^n$
+
+is called a **power series**. The numbers $c_n$ are called the coefficients of the series; $z$ is a complex number.
+
+### 3.39 Theorem
+Given the power series $\sum c_n z^n$, put
+
+$\alpha = \mathop{\lim \sup}\limits_{n \to \infty} \sqrt[n]{\left|c_n\right|}$, $R = \frac 1 \alpha$
+
+(If $\alpha = 0$, $R = +\infty$; if $\alpha = +\infty$, $R = 0$) Then $\sum c_n n^z$ converges if $|z| < R$, and diverges if $|z| > R$.
+
 ---
 
 
@@ -538,6 +616,23 @@ If $h$ is constant, this holds for every $x \in (a, b)$. If $h(t) > h(a)$ for so
 If $f$ is a real continuous function on $[a, b]$ which is differentiable in $(a, b)$, then there is a point $ x \in (a, b)$ at which
 
 $f(b) - f(a) = (b - a)f'(x)$.
+
+
+# 7 Sequences and Series of Functions
+
+
+## Discussion of Main Problem
+
+### 7.1 Definition
+Suppose $\{f_n\}, n = 1, 2, 3, \dots,$ is asequence of functions defined on a set $E$, and suppose that the sequence of numbers $\{f_n(x)\}$ converges for every $x \in E$. We can then define a function $f$ by
+
+**(eqution 7.1)** $f(x) = \lim\limits_{n \to \infty} f_n(x), (x \in E)$.
+
+Under these circumstances we say that $\{f_n\}$ converges on $E$ and that $f$ is the **limit**, or the **limit function**, of $\{f_n\}$. Sometimes we shall use a more descriptive terminology and shall say that "$\{f_n\}$ converges to $f$ **pointwise** on $E$" if (equation 7.1) holds. Similarly, if $\sum f_n(x)$ converges for every $x \in E$, and if we define
+
+**(equation 7.2)** $f(x) = \sum\limits_{n=1}^\infty f_n(x), (x \in E)$,
+
+the function $f$ is called the **sum** of the series $\sum f$.
 
 
 # 8 Some Special Functions
