@@ -205,6 +205,76 @@ Countable sets are sometimes called **enumerable**, or **denumerable**.
 ### 2.7 Definition
 By a **sequence**, we mean a function $f$ defined on the set $J$ of all positive integers. If $f(n) = x_n$, for $n \in J$, it is customary to denote the sequence $f$ by the symbol ${x_n}$, or sometimes by $x_1, x_2, x_3, ...$. The values of $f$, that is, the elements $x_n$, are called the terms of the sequence. If $A$ is a set and if $x_n \in A$ for all $n \in J$, then {x_n} is said to be a *sequence in $A$*, or a *sequence of elements of $A$*.
 
+### 2.8 Theorem
+Every infinite subset of a countable set $A$ is countable.
+
+### 2.9 Definition
+Let $A$ and $\Omega$ be sets, and suppose that with each element $\alpha$ of $A$ there is associated a subset of $\Omega$ which we denote by $E_\alpha$.
+
+The set whose elements are the set $E_\alpha$ will be denoted by $\{E_\alpha\}$. Instead of speaking of sets of sets, we shall sometimes speak of a cllection of sets, or a family of sets.
+
+The **union** of the sets $E_\alpha$ is defined to be the set $S$ such that $x \in S$ if and only if $x \in E_\alpha$ for at least one $\alpha \in A$. We use the notaiton
+$$
+S = \bigcup_{\alpha \in A}E_\alpha.
+$$
+If $A$ consists of the integers $1, 2, \dots, n,$ one usually writes
+$$
+S = \bigcup_{m = 1}^n E_m.
+$$
+or
+$$
+S = E_1 \cup E_2 \cup \cdots \cup E_n.
+$$
+If $A$ is the set of all positive integers, the usual notaiton is
+$$
+S = \bigcup_{m = 1}^\infty E_m
+$$
+The symbol $\infty$ indicates that the union of a **countable** collection of sets is taken, and should not be confused with the symbols $+\infty$, $-\infty$.
+
+The **intersection** the sets $E_\alpha$ is defined to be the set $P$ such that $x \in P$ if and only if $x \in E_\alpha$ for every $\alpha \in A$. We use the notation
+$$
+P = \bigcap_{\alpha \in A}E_\alpha,
+$$
+or
+$$
+P = \bigcap_{m=1}^n E_m = E_1 \cap E_2 \cap \cdots \cap E_n,
+$$
+or
+$$
+P = \bigcap_{m=1}^\infty E_m.
+$$
+as for unions. If $A \cap B$ is not empty, we say that $A$ and $B$ **intersect**; otherwise they are **disjoint**.
+
+### 2.12 Theorem
+Let $\{E_n\}, n = 1, 2, 3, \dots,$ be a sequence of countable sets, and put
+$$
+S = \bigcup_{n=1}^\infty E_n
+$$
+Then $S$ is countable.
+
+**Corollary** Suppose $A$ is at most countable, and, for every $\alpha \in A$, $B_\alpha$ is at most countable. Put
+$$
+T = \bigcup_{\alpha \in A}B_\alpha.
+$$
+Then $T$ is at most countable.
+
+### 2.13 Theorem
+Let $A$ be a countable set, and let $B_n$ be the set of all $n$-tuples $(a_1, \dots, a_n)$, where $a_k \in A (k = 1, \dots, n)$, and the elements $a_1, \dots, a_n$ need not be distinct. Then $B_n$ is countable.
+
+**Corollary** The set of all rational numbers is countable.
+
+### 2.14 Theorem
+Let $A$ be the set of all sequences whose elements are the digits $0$ and $1$. This set $A$ is uncountable.
+
+The elements of $A$ are sequences like $1, 0, 0, 1, 0, 1, 1, 1, \dots$.
+
+**Proof** Let $E$ be a countable subset of $A$, and let $E$ consist of the sequences $s_1, s_2, s_3, \dots$ We construct a sequence $s$ as follows. If the $n$th digit in $s_n$ is $1$, we let the $n$th digit of $s$ be 0, and vice versa. Then the sequence $s$ differs from every member of $E$ in at least one place; hence $s \notin E$. But clearly $s \in A$, so that $E$ is a proper subset of $A$.
+
+We have shown that every countable subset of$A$ is a proper subset of $A$. It follows that $A$ is uncountable (for otherwise $A$ would be a proper subset of A, which is absurd).
+
+The idea of above proof was first used by Cantor, and is called Cantor's diagonal process.
+
+
 ## Metric Spaces
 
 ### 2.15 Definition
@@ -240,6 +310,12 @@ Let $X$ be a metric space. All points and sets mentioned below are understood to
 8. $E$ is **perfect** if $E$ is closed and if every point of $E$ is a limit point of $E$.
 9. $E$ is **bounded** if there is a real number $M$ and a point $q \in X$ such that $d(p, q) < M$ for all $p \in E$.
 10. $E$ is **dense** in $X$ if every point of $X$ is a limit point of $E$, or a point of $E$ (or both).
+
+### 2.19 Theorem
+Every neighborhood is an open set.
+
+### 2.20 Theorem
+If $p$ is a limit point of a set $E$, then every neighborhood of $p$ contains infinitely many points of $E$.
 
 ### 2.23 Theorem 
 A set $E$ is open if and only if its complement is closed.
