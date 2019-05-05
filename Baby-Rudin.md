@@ -317,10 +317,24 @@ Every neighborhood is an open set.
 ### 2.20 Theorem
 If $p$ is a limit point of a set $E$, then every neighborhood of $p$ contains infinitely many points of $E$.
 
+**Corollary** A finite point set has no limit point.
+
+### 2.22 Theorem
+Let $\{E_\alpha\}$ be a (finite or infinite) collection of sets $E_\alpha$. Then
+$$
+(\bigcup_\alpha E_\alpha)^c = \bigcap_\alpha(E_\alpha^c).
+$$
+
 ### 2.23 Theorem 
 A set $E$ is open if and only if its complement is closed.
 
 **Corollary** A set $F$ is closed if and only if its complement is open.
+
+### 2.24 Theorem
+1. For any collection $\{G_\alpha\}$ of open sets, $\cup_\alpha G_\alpha$ is open.
+2. For any collection $\{F_\alpha\}$ of closed sets, $\cap_\alpha F_\alpha$ is closed.
+3. For any finite collection $G_1, G_2, \dots, G_n$ of open sets, $\cap_{i=1}^nG_i$ is open.
+4. For any finite collection $F_1, F_2, \dots, F_n$ of closed sets, $\cup_{i=1}^nF_i$ is closed.
 
 ### 2.26 Definition 
 If X is a metric space, if $E \subset X$, and if $E'$ denotes the set of all limit points of $E$ in $X$, then the **closure** of $E$ is the set $\bar{E} = E \cup E'$.
@@ -329,10 +343,16 @@ If X is a metric space, if $E \subset X$, and if $E'$ denotes the set of all lim
 If $X$ is a metric space and $E \subset X$, then
 1. $\bar{E}$ is closed,
 2. $E = \bar{E}$ if and only if $E$ is closed,
-3. $E \subset F$ for every closed set $F \subset X$ such that $\bar{E} \subset F$.
+3. $\bar{E} \subset F$ for every closed set $F \subset X$ such that $E \subset F$.
 
 ### 2.28 Theorem
 Let $E$ be a nonempty set of real numbers which is bounded above. Let $y = \sup E$. Then $y \in \bar{E}$. Hence $y \in E$ if $E$ is closed.
+
+### 2.29 Remark
+Suppose $E \subset Y \subset X$, where $X$ is a metric space. To say that $E$ is an open subset of $X$ means that to each point $p \in E$ there is associated a positive number $r$ such that the conditions $d(p, q) < r, q \in X$ imply that $q \in E$. $Y$ is also a metric space, so that our definitions may equally well be made within $Y$. To be quite explicit, let us say that $E$ is **open relative** to $Y$ if to each $p \in E$ there is associate an $r > 0$ such that $q \in E$ whenever $d(p, q) < r$ and $q \in Y$.A set may be open relative to $Y$ without being an open subset of $X$.
+
+### 2.30 Theorem
+Suppose $Y \subset X$. A subset $E$ of $Y$ is open relative to $Y$ if and only if $E = Y \cap G$ for some open subset $G$ of $X$.
 
 
 ## Compact Sets
@@ -343,6 +363,12 @@ By an **open cover** of a set $E$ in a metric space $X$ we mean a collection $\{
 
 ### 2.32 Definition
 A subset $K$ of a metric space $X$ is said to be **compact** if every open cover of $K$ contains a *finite* subcover.
+
+### 2.33 Theorem
+Suppose $K \subset Y \subset X$. Then $K$ is compact relative to $X$ if and only if $K$ is compact relative to $Y$.
+
+### 2.34 Theorem
+Compact subsets of metric spaces are closed.
 
 ### 2.38 Theorem
 If $\{I_n\}$ is a sequence of intervals in $R^1$, such that $I_n \supset I_{n+1}$ $(n = 1,2,3,...)$, then $\bigcap_1^\infty I_n$ is not empty.
