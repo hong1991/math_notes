@@ -188,7 +188,7 @@ If $E \subset B$, $f^{-1}(E)$ denotes the set of all $x \in A$ such that $f(x) \
 
 ### 2.3 Definition
 If there exists a 1-1 mapping of $A$ onto $B$, we say that $A$ and $B$ can be put in 1-1 **correspondence**, or that $A$ and $B$ have the same **cardinal number**, or, briefly, that $A$ and $B$ are **equivalent**, and we write $A \sim B$. This relation clearly has the following properties:
-+ It is reflexitive: $A \sim B$.
++ It is reflexitive: $A \sim A$.
 + It is symmetric: If $A \sim B$, then $B \sim A$.
 + It is transitive: If $A \sim B$ and $B \sim C$, then $A \sim C$.
 
@@ -203,7 +203,7 @@ For any positive integer $n$, let $J_n$ be the set whose elements are the intege
 Countable sets are sometimes called **enumerable**, or **denumerable**.
 
 ### 2.7 Definition
-By a **sequence**, we mean a function $f$ defined on the set $J$ of all positive integers. If $f(n) = x_n$, for $n \in J$, it is customary to denote the sequence $f$ by the symbol ${x_n}$, or sometimes by $x_1, x_2, x_3, ...$. The values of $f$, that is, the elements $x_n$, are called the terms of the sequence. If $A$ is a set and if $x_n \in A$ for all $n \in J$, then {x_n} is said to be a *sequence in $A$*, or a *sequence of elements of $A$*.
+By a **sequence**, we mean a function $f$ defined on the set $J$ of all positive integers. If $f(n) = x_n$, for $n \in J$, it is customary to denote the sequence $f$ by the symbol ${x_n}$, or sometimes by $x_1, x_2, x_3, ...$. The values of $f$, that is, the elements $x_n$, are called the terms of the sequence. If $A$ is a set and if $x_n \in A$ for all $n \in J$, then $\{x_n\}$ is said to be a **sequence in $A$**, or a **sequence of elements of $A$**.
 
 ## Metric Spaces
 
@@ -213,7 +213,7 @@ A set $X$, whose elements we shall call **points**, is said to be a **metric spa
 2. $d(p, q) = d(q, p)$;
 3. $d(p, q) \leq d(p, r) + d(r, q)$, for any $r \in X$.
 
-Any function with these three properties is called a *distance function*, or a *metric*.
+Any function with these three properties is called a **distance function**, or a **metric**.
 
 ### 2.17 Definition
 By the **segment** $(a, b)$ we mean the set of all real numbers $x$ such that $a < x < b$.
