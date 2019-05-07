@@ -128,6 +128,16 @@ The following statements are true in every ordered field.
 5. If $0 < x < y$ then $0 < 1/y < 1/x$.
 
 
+## The Real Field
+
+
+### 1.20 Theorem
+1. If $x \in R$, $y \in R$, and $x > 0$, then there is a positive integer $n$ such that $nx > y$.
+2. If $x \in R$, $y \in R$, and $x < y$, then there exists a $p \in Q$ such that $x < p < y$.
+
+Part 1 is usually referred to as the **archimedean property** of $R$. Part 2. may be stated by saying that $Q$ is dense in $R$: Between any two real numbers there is a rational one.
+
+
 ## The Extended Real Number System
 
 
@@ -370,6 +380,21 @@ Suppose $K \subset Y \subset X$. Then $K$ is compact relative to $X$ if and only
 ### 2.34 Theorem
 Compact subsets of metric spaces are closed.
 
+### 2.35 Theorem
+Closed subsets of compact sets are compact.
+
+**Proof** Suppose $F \subset K \subset X$, $F$ is closed (relative to $X$), and $K$ is compact. Let $\{V_\alpha\}$ be an open cover of $F$. If $F^c$ is adjoined to $\{V_\alpha\}$, we obtain an open cover $\Omega$ of $K$. Since $K$ is compact, there is a finite subcollection $\Phi$ of $\Omega$ which covers $K$, and hence $F$. If $F^c$ is a member of $\Phi$, we may remove it from $\Phi$ and still retain an open cover of $F$. We have thus shwn that a finite subcollection of $\{V_\alpha\}$ covers $F$.
+
+**Corollary** If $F$ is closed and $K$ is compact then $F \cap K$ is compact.
+
+### 2.36 Theorem
+If $\{K_\alpha\}$ is a collection of compact subsets of a metric space $X$ such that the intersection of every finite subcollection of $\{K_\alpha\}$ is nonempty, then $\cap K_\alpha$ is nonempty.
+
+**Corollary** If $\{K_n\}$ is a sequence of nonempty compact sets such that $K_n \supset K_{n+1} (n = 1, 2, 3, \dots)$, then $\cap_1^\infty K_n$ is not empty.
+
+### 2.37 Theorem
+If $E$ is an infinite subset of a compact set $K$, then $E$ has a limit point in $K$.
+
 ### 2.38 Theorem
 If $\{I_n\}$ is a sequence of intervals in $R^1$, such that $I_n \supset I_{n+1}$ $(n = 1,2,3,...)$, then $\bigcap_1^\infty I_n$ is not empty.
 
@@ -385,7 +410,6 @@ If a set $E$ in $R^k$ has one of following three properties, then it has the oth
 2. $E$ is compact.
 3. Every infinite subset of $E$ has a limit point in $E$.
 
-**Proof** If 1. holds, then $E \subset I$ for some $k$-cell $I$, and 2. follows from Theorms 2.40
 
 ---
 
