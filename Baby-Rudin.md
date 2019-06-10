@@ -377,6 +377,8 @@ A subset $K$ of a metric space $X$ is said to be **compact** if every open cover
 ### 2.33 Theorem
 Suppose $K \subset Y \subset X$. Then $K$ is compact relative to $X$ if and only if $K$ is compact relative to $Y$.
 
+By virtue of this theorem we are able, in many situations, to regard compact sets as metric spaces in their own right, without paying any attention to any embedding space. In particular, although it makes little sense to talk of **open** spaces, or of **closed** spaces (every metric space $X$ is an open subset of itself, and is a closed subset of itself), it does make sense to talk of **compact** metric spaces.
+
 ### 2.34 Theorem
 Compact subsets of metric spaces are closed.
 
@@ -409,6 +411,14 @@ If a set $E$ in $R^k$ has one of following three properties, then it has the oth
 1. $E$ is closed and bounded.
 2. $E$ is compact.
 3. Every infinite subset of $E$ has a limit point in $E$.
+
+### 2.42 Theorem (Weierstrass)
+Every bounded infinite subset of $\{R^k\}$ has a limit point in $R^k$.
+
+
+## Perfect Sets
+
+### 2.43 Theorem
 
 
 ---
@@ -456,9 +466,32 @@ A sequence $\{p_n\}$ in a metric space X is said to be a **Cauchy sequence** if 
 ### 3.9 Definition
 Let $E$ be a nonempty subset of a metric space $X$, and let $S$ be the set of all real numbers of the form $d(p, q)$, with $p \in E$ and $q \in E$. The sup of $S$ is called the **diameter** of $E$.
 
+If $\{p_n\}$ is a sequence in $X$ and if $E_N$ consists of the points $p_N, p_{N+1}, p_{N+2}, \dots$, it is clear from the two preceding definitions that $\{p_n\}$ is a Cauchy sequence if and only if
+$$
+\lim_{N \to \infty} \mathop{diam} E_N = 0.
+$$
+
 ### 3.10 Theorem
 1. If $\bar{E}$ is the closure of a set $E$ in a metric space $X$, then $diam \bar{E}$ = diam E$.
-2. If $K_n$ is a sequence of compact sets in $X$ such that $K_n \supset K_{n+1}$ $(n = 1,2,3,\dots)$ and if $\lim\limits_{n \to \infty} diam K_n = 0$, then $\bigcap_1^{\infty}K_n$ consists of exactly one point.
+2. If $K_n$ is a sequence of compact sets in $X$ such that $K_n \supset K_{n+1}$ $(n = 1,2,3,\dots)$ and if $\lim\limits_{n \to \infty} diam K_n = 0$, then $\bigcap_1^{\infty}K_n$ consists of exactly one point.($K_n$ must not be empty set)
+
+### 3.11 Theorem
+1. In any metric space $X$, every convergent sequence is a Cauchy sequence.
+2. If $X$ is a compact metric space and if $\{p_n\}$ is a Cachy sequence in $X$, then $\{p_n\}$ converges to some point of $X$.
+3. In $R^k$, every Cauchy sequence converges.
+
+### 3.12 Definition
+A metric space in which every Cauchy sequence converges is said to be **complete**.
+
+### 3.13 Definition 
+A sequence $\{s_n\}$ of real numbers is said to be
+1. **monotonically increasing** if $s_n \le s_{n+1} (n = 1, 2, 3, \dots)$;
+2. **monotonically decreasing** if $s_n \ge s_{n+1} (n = 1, 2, 3, \dots)$.
+
+The class of monotonic sequences consists of the increasing and the decreasing sequences.
+
+### 3.14 Theorem
+Suppose $\{s_n\}$ is monotonic. Then $\{s_n\}$ converges if and only if it is bounded.
 
 
 ## Upper and Lower Limits
@@ -532,6 +565,27 @@ Sometimes for convenience of notation, we shall consider series of the form
 
 And frequently, when there is no possible ambiguity, or when the distinction is immaterial, we shall simply write $\sum a_n$ in place of (Symbol Series 1) or (Symbol Series 2).
 
+### 3.22 Theorem
+$\sum a_n$ converges if and only if for every $\epsilon > 0$ there is an integer $N$ such that
+$$
+|\sum_{k=n}^m a_k| \le \epsilon
+$$
+if $m \ge n \ge N$.
+
+In paritcular, by taking $m = n$, it becomes
+$$
+|a_n| < \epsilon (n \ge N).
+$$
+
+### 3.23 Theorem 
+If $\sum a_n$ converges, then $\lim_{n \to \infty}a_n = 0$.
+
+### 3.24 Theorem
+A series of nonnegative terms converges if and only if its partial sums form a bounded sequence.
+
+### 3.25 Theorem **Comparasion Test**
+1. If $|a_n| \le c_n$ for $n \ge N_0$, where $N_0$ is some fixed integer, and if $\sum c_n$ converges, then $\sum a_n$ converges.
+2. If $a_n \ge d_n \ge 0$ for $n \ge N_0$, and if $\sum d_n$ diverges, then $\sum a_n$ diverges.
 
 
 
