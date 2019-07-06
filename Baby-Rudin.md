@@ -798,6 +798,64 @@ If $f$ is a real continuous function on $[a, b]$ which is differentiable in $(a,
 $f(b) - f(a) = (b - a)f'(x)$.
 
 
+
+# 6 The Riemann-Stieltjes Integral
+
+
+## Definition and Existence of the Integral
+
+### 6.1 Definition
+Let $[a, b]$ be a given interval. By a **partition** $P$ of $[a, b]$ we mean a finite set of points $x_0, x_1, \dots, x_n$, where
+$$
+a = x_0 \le x_1 \le \dots \le x_{n-1} \le x_n = b.
+$$
+We write
+$$
+\Delta x_i = x_i - x_{i-1}, (i = 1, \dots, n).
+$$
+Now suppose $f$ is a bounded real function defined on $[a, b]$. Corresponding to each partition $P$ of $[a, b]$ we put
+$$
+M_i = \sup f(x), (x_{i-1} \le x \le x_i),
+$$
+$$
+m_i = \inf f(x), (x_{i-1} \le x \le x_i),
+$$
+$$
+U(P, f) = \sum_{i=1}^n M_i \Delta_i,
+$$
+$$
+L(P, f) = \sum_{i=1}^n m_i \Delta_i,
+$$
+and finally
+
+**(Equation 6.1)** 
+$$\overline{\int}_a^b f dx = \inf U(P, f),$$
+**(Equation 6.2)**
+$$
+\underline{\int}_a^b f dx = \inf U(P, f),
+$$
+where the inf and the sup are taken over all partitions $P$ of $[a, b]$. The left members of (equation 6.1) and (equation 6.2) are called the **upper** and **lower Riemann integrals** of $f$ over $[a, b]$, respectively.
+
+If the upper and lower integrals are equal, we say that $f$ is **Riemann integrable** on $[a, b]$, we write $f \in \mathscr{R}$ (that is, $\mathscr{R}$ denotes the set of Riemann-integrable functions), and we denote the common value of (equation 6.1) and (equation 6.2) by 
+$$
+\int_a^bfdx
+$$ 
+or 
+$$
+\int_a^bf(x)dx
+$$
+This is the Riemann integral of $f$ over $[a, b]$. Since $f$ is bounded, there exist two numbers, $m$ and $M$, such that
+$$
+m \le f(x) \le M, (a \le x \le b).
+$$
+Hence, for every $P$,
+$$
+m(b-a) \le L(P, f) \le U(P, f) \le M(b-a),
+$$
+so that the numbers $L(P, f)$ and $U(P, f)$ form a bounded set. This shows that **the upper and lower integrals are defined** for **every** bounded function $f$. The question of their equality, and hence the question of the integrability of $f$, is a more delicate one. Instead of investigating it separately for the Riemann integral, we shall immediately consider a more general situation.
+
+
+
 # 7 Sequences and Series of Functions
 
 
