@@ -675,7 +675,7 @@ Then
 ### 4.5 Definition
 Suppose $X$ and $Y$ are metric spaces, $E \subset X$, $p \in E$, and $f$ maps $E$ into $Y$. Then $f$ is said to be **continuous** at $p$ if for every $\epsilon > 0$ there exists a $\delta > 0$ such that 
 
-$d_Y(f(x), f(p) < \epsilon$
+$d_Y(f(x), f(p)) < \epsilon$
 
 for all points $x \in E$ for which $d_X(x, p) < \delta$.
 
@@ -717,6 +717,17 @@ Suppose $f$ is a continuous real function on a compact metric space X, and
 $M = \sup\limits_{p \in x} f(p)$, $m = \inf\limits_{p \in X} f(p)$.
 
 Then there exist point $p, q \in X$ such that $f(p) = M$ and $f(q) = m$.
+
+
+### 4.18 Definition
+Let $f$ be a mapping of metric space $X$ into a metric space $Y$. We say that $f$ is **uniformly continuous** on $X$ if for every $\epsilon > 0$ there exists $\delta > 0$ such that
+
+**(equation 4.15)**
+$$ d_Y(f(p), f(q)) < \epsilon $$
+for all $p$ and $q$ in $X$ for which $d_X(p, q) < \delta$.
+
+### 4.19 Theorem
+Let $f$ be a continuous mapping of a compact metric space $X$ into a metric space $Y$. Then $f$ is uniformly continuous on $X$.
 
 ### 4.33 Definition
 Let $f$ be a real function defined on $E \subset R$. We say that
@@ -854,6 +865,68 @@ m(b-a) \le L(P, f) \le U(P, f) \le M(b-a),
 $$
 so that the numbers $L(P, f)$ and $U(P, f)$ form a bounded set. This shows that **the upper and lower integrals are defined** for **every** bounded function $f$. The question of their equality, and hence the question of the integrability of $f$, is a more delicate one. Instead of investigating it separately for the Riemann integral, we shall immediately consider a more general situation.
 
+## 6.2 Definition
+Let $\alpha$ be a monotonically increasing function on $[a, b]$ (since $\alpha (a)$ and $\alpha (b)$ are finite, it follows that $\alpha$ is bounded on $[a, b]$). Corresbonding to each partition $P$ of $[a, b]$, we write
+$$
+\Delta\alpha_i = \alpha(x_i) - \alpha(x_{i-1})
+$$
+It is clear that $\Delta\alpha_i > 0$. For any real function $f$ which is bounded on $[a, b]$ we put
+$$ U(P, f, \alpha) = \sum_{i=1}^nM_i\Delta\alpha_i $$
+$$ L(P, f, \alpha) = \sum_{i=1}^nm_i\Delta\alpha_i $$
+where $M_i$, $m_i$ have the same meaning as in Definition 6.1, and we define
+**(Equation 6.5)** 
+$$\overline{\int}_a^b f d\alpha = \inf U(P, f, \alpha),$$
+**(Equation 6.6)** 
+$$\underline{\int}_a^b f d\alpha = \sup L(P, f, \alpha),$$
+the $\inf$ and $\sup$ again being taken over all partitions.
+
+If the left members of (equation 6.5) and (equation 6.6) are equal, we denote their common value by
+
+**(Equation 6.7)** 
+$$ \int_a^bd\alpha $$
+or sometimes by
+
+**(Equation 6.8)** 
+$$ \int_a^bd\alpha(x) $$
+
+This is the *Riemann-Stieltjes* integral (or simply the **Stieljes integral**) of $f$ with respect to $\alpha$, over $[a, b]$.
+
+If (equation 6.7) exists, i.e, if (equation 6.5) and (equation 6.6) are equal, we say that $f$ is integrable with respect to $\alpha$, in the Riemann sense, and write $f \in \mathscr{R}(\alpha)$.
+
+By taking $\alpha(x) = x$, the Riemann integral is seen to be a special case of the Riemann-Stieltjes integral. Let us mention explicitly, however, that in the general case $\alpha$ need not even be continuous.
+
+
+## 6.3 Definition
+We say that the partition $P^*$ is a refinement of $P$ if $P^* \supset P$ (that is, if every point of $P$ is point of $P^*$). Given two partitions, $P_1$ and $P_2$, we say that $P^*$ is their common refinement if $P^* = P_1 \cup P_2$.
+
+
+## 6.4 Theorem
+If $P^*$ is a refinement of $P$, then
+$$ L(P, f, \alpha) \le L(P^*, f, \alpha) $$
+and
+$$ U(P^*, f, \alpha) \le U(P, f, \alpha) $$
+
+
+## 6.5 Theorem
+$$ \underline{\int}_a^bfd\alpha \le \overline{\int}_a^bfd\alpha $$
+
+
+## 6.6 Theorem
+$f \in \mathscr{R}(\alpha)$ on $[a, b]$ if and only if for every $\epsilon > 0$ there exists a partition $P$ such that
+**(equation 6.13)**
+$$ U(P, f, \alpha) - L(P, f, \alpha) < \epsilon $$
+
+
+## 6.7 Theorem
+1. If (equation 6.13) holds for some $P$ and some $\epsilon$, then (equation 6.13) holds (with the same $\epsilon$) for every refinement of $P$.
+2. If (equation 6.13) holds for $P = \{x_0, \dots, x_n\}$ and if $s_i$, $t_i$ are arbitrary points in $[x_{i-1}, x_i]$, then
+   $$ \sum_{i=1}^n \left|f(s_i)-f(t_i)\right|\Delta\alpha_i < \epsilon $$
+3. If $f \in \mathscr{R}(\alpha)$ and the hypotheses of 2. hold, then
+   $$ \left|\sum_{i=1}^nf(t_i)\Delta\alpha_i-\int_a^bfd\alpha\right| < \epsilon $$
+
+
+## 6.8 Theorem
+If $f$ is continuous on $[a, b]$ then $f \in \mathscr{R}(\alpha)$ on $[a, b]$.
 
 
 # 7 Sequences and Series of Functions
