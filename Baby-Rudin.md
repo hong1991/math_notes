@@ -729,6 +729,34 @@ for all $p$ and $q$ in $X$ for which $d_X(p, q) < \delta$.
 ### 4.19 Theorem
 Let $f$ be a continuous mapping of a compact metric space $X$ into a metric space $Y$. Then $f$ is uniformly continuous on $X$.
 
+
+
+## Discontinuities
+
+
+### 4.25 Definition
+Let $f$ be defined on $(a, b)$. Consider any point $x$ such that $a \le x < b$. We write 
+$$f(x+) = q$$
+if $f(t_n) \to q$ as $n \to \infty$, for all sequences $\{t_n\}$ in $(x, b)$ such that $t_n \to x$. To obtain the definition of $f(x-), for $a < x \le b$, we restrict ourselves to sequences $\{t_n\}$ in (a, x).
+
+It is clear that any point $x$ of $(a, b)$, $\lim_{t \to x}f(t)$ exists if and only if
+$$ f(x+) = f(x-) = \lim_{t \to x}f(t) $$
+
+### 4.26 Definition
+Let $f$ be defined on $(a, b)$. If $f$ is discontinuous at a point $x$, and if $f(x+)$ and $f(x-)$ exist, then $f$ is said to have a discontinuity of the **first kind**, or a **simple discontinuity**, at $x$. Otherwise the discontinuity is said to be a **second kind**.
+
+
+
+## Monotonic Functions
+
+
+### 4.28 Definition
+Let $f$ be real on $(a, b)$. Then $f$ is said to be **monotonically increasing** on $(a, b)$ if $a < x < y < b$ implies $f(x) \le f(y)$. If the last inequality is reversed, we obtain the definition of a **monotonically decrasing** function. The class ofmonotonic functions consists of both the increasing and the decreasing functions.
+
+
+## Infinite Limits and Limits at Infinity
+
+
 ### 4.33 Definition
 Let $f$ be a real function defined on $E \subset R$. We say that
 
@@ -865,7 +893,7 @@ m(b-a) \le L(P, f) \le U(P, f) \le M(b-a),
 $$
 so that the numbers $L(P, f)$ and $U(P, f)$ form a bounded set. This shows that **the upper and lower integrals are defined** for **every** bounded function $f$. The question of their equality, and hence the question of the integrability of $f$, is a more delicate one. Instead of investigating it separately for the Riemann integral, we shall immediately consider a more general situation.
 
-## 6.2 Definition
+### 6.2 Definition
 Let $\alpha$ be a monotonically increasing function on $[a, b]$ (since $\alpha (a)$ and $\alpha (b)$ are finite, it follows that $\alpha$ is bounded on $[a, b]$). Corresbonding to each partition $P$ of $[a, b]$, we write
 $$
 \Delta\alpha_i = \alpha(x_i) - \alpha(x_{i-1})
@@ -895,38 +923,42 @@ If (equation 6.7) exists, i.e, if (equation 6.5) and (equation 6.6) are equal, w
 
 By taking $\alpha(x) = x$, the Riemann integral is seen to be a special case of the Riemann-Stieltjes integral. Let us mention explicitly, however, that in the general case $\alpha$ need not even be continuous.
 
-
-## 6.3 Definition
+### 6.3 Definition
 We say that the partition $P^*$ is a refinement of $P$ if $P^* \supset P$ (that is, if every point of $P$ is point of $P^*$). Given two partitions, $P_1$ and $P_2$, we say that $P^*$ is their common refinement if $P^* = P_1 \cup P_2$.
 
-
-## 6.4 Theorem
+### 6.4 Theorem
 If $P^*$ is a refinement of $P$, then
 $$ L(P, f, \alpha) \le L(P^*, f, \alpha) $$
 and
 $$ U(P^*, f, \alpha) \le U(P, f, \alpha) $$
 
-
-## 6.5 Theorem
+### 6.5 Theorem
 $$ \underline{\int}_a^bfd\alpha \le \overline{\int}_a^bfd\alpha $$
 
-
-## 6.6 Theorem
+### 6.6 Theorem
 $f \in \mathscr{R}(\alpha)$ on $[a, b]$ if and only if for every $\epsilon > 0$ there exists a partition $P$ such that
 **(equation 6.13)**
 $$ U(P, f, \alpha) - L(P, f, \alpha) < \epsilon $$
 
 
-## 6.7 Theorem
+### 6.7 Theorem
 1. If (equation 6.13) holds for some $P$ and some $\epsilon$, then (equation 6.13) holds (with the same $\epsilon$) for every refinement of $P$.
 2. If (equation 6.13) holds for $P = \{x_0, \dots, x_n\}$ and if $s_i$, $t_i$ are arbitrary points in $[x_{i-1}, x_i]$, then
    $$ \sum_{i=1}^n \left|f(s_i)-f(t_i)\right|\Delta\alpha_i < \epsilon $$
 3. If $f \in \mathscr{R}(\alpha)$ and the hypotheses of 2. hold, then
    $$ \left|\sum_{i=1}^nf(t_i)\Delta\alpha_i-\int_a^bfd\alpha\right| < \epsilon $$
 
-
-## 6.8 Theorem
+### 6.8 Theorem
 If $f$ is continuous on $[a, b]$ then $f \in \mathscr{R}(\alpha)$ on $[a, b]$.
+
+### 6.9 Theorem
+If $f$ is monotonic on $[a, b]$, and if $\alpha$ is continuous on $[a, b]$, then $f \in \mathscr{R}(\alpha)$. (We still assume, of course, that $\alpha$ is monotonic.)
+
+### 6.10 Theorem
+Suppose $f$ is bounded on $[a, b]$, $f$ has only finitely many points of discontinuity on $[a, b]$, and $\alpha$ is continuous at every point at which $f$ is discontinuous. Then $f \in \mathscr{R}(\alpha)$.
+
+### 6.11 Theorem
+Suppose $f \in \mathscr{R}(\alpha)$ on $[a, b]$, $m \le f \le M$, $\phi$ is continuous on $[m, M]$, and $h(x) = \phi(f(x))$ on $[a, b]$. Then $h \in \mathscr{R}(\alpha)$ on $[a, b]$.
 
 
 # 7 Sequences and Series of Functions
