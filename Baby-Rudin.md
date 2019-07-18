@@ -961,6 +961,42 @@ Suppose $f$ is bounded on $[a, b]$, $f$ has only finitely many points of discont
 Suppose $f \in \mathscr{R}(\alpha)$ on $[a, b]$, $m \le f \le M$, $\phi$ is continuous on $[m, M]$, and $h(x) = \phi(f(x))$ on $[a, b]$. Then $h \in \mathscr{R}(\alpha)$ on $[a, b]$.
 
 
+## Properties of The Integral
+
+### 6.12 Theorem
+1. If $f_1 \in \mathscr{R}(\alpha)$ and $f_2 \in \mathscr{R}(\alpha)$ on $[a, b]$, then
+    $$ f_1 + f_2 \in \mathscr{R}(\alpha) $$
+    $cf \in \mathscr{R}(\alpha)$ for every constant $c$, and
+    $$\int_a^b(f_1+f_2)d\alpha = \int_a^bf_1d\alpha + \int_a^bf_2d\alpha$$
+    $$\int_a^bcf d\alpha = c\int_a^bf d\alpha$$
+2. If $f_1(x) \le f_2(x)$ on $[a, b]$, then
+    $$\int_a^bf_1d\alpha \le \int_a^bf_2d\alpha$$
+3. If $f \in \mathscr{R}(\alpha)$ on $[a, b]$ and if $a < c < b$, then $f \in \mathscr{R}(\alpha)$ on $[a, c]$ and on $[c, b]$, and
+    $$\int_a^cfd\alpha + \int_c^bfd\alpha = \int_a^bfd\alpha$$
+4. If $f \in \mathscr{R}(\alpha)$ on $[a, b]$ and if $|f(x)| \le M$ on $[a, b]$, then
+    $$\left|\int_a^bfd\alpha\right| \le M[\alpha(b) - \alpha(a)]$$
+5. If $f \in \mathscr{R}(\alpha_1)$ and $f \in \mathscr{R}(\alpha_2)$, then $f \in \mathscr{R}(\alpha_1+\alpha_2)$ and
+    $$\int_a^bfd(\alpha_1+\alpha_2) = \int_a^bfd\alpha_1 + \int_a^bfd\alpha_2$$
+    if $f \in \mathscr{R}(\alpha)$ and $c$ is a positive constant, then $f \in \mathscr{R}(c\alpha)$ and
+    $$\int_a^bfd(c\alpha) = c\int_a^bfd\alpha$$
+
+### 6.13 Theorem
+If $f \in \mathscr{R}(\alpha)$ and $g \in \mathscr{R}(\alpha)$ on $[a, b]$, then
+1. $fg \in \mathscr{R}$;
+2. $|f| \in \mathscr{R}(\alpha)$ and $\left|\int_a^bfd\alpha\right| \le \int_a^b|f|d\alpha$.
+
+### 6.14 Definition
+The unit step function $I$ is defined by
+$$I(x) = \begin{cases}0\hspace{10pt}(x \le 0),\\1\hspace{10pt}(x > 0).\end{cases}$$
+
+### 6.15 Theorem
+If $a < s < b$, is bounded on $[a, b]$, $f$ is continuous at $s$, and $\alpha(x) = I(x-s)$, then
+$$\int_a^bfd\alpha=f(s).$$
+
+### 6.16 Theorem
+
+
+
 # 7 Sequences and Series of Functions
 
 
