@@ -994,6 +994,10 @@ If $a < s < b$, is bounded on $[a, b]$, $f$ is continuous at $s$, and $\alpha(x)
 $$\int_a^bfd\alpha=f(s).$$
 
 ### 6.16 Theorem
+Suppose $c_n \ge 0$ for $1, 2, 3, \dots$, $\sum c_n$ converges, $\{s_n\}$ is a sequence of distinct points in $(a, b)$, and
+$$\alpha(x) = \sum_{n=1}^\infty c_nI(x-s_n).$$
+Let $f$ be continuous on $[a, b]$. Then
+$$\int_a^bfd\alpha = \sum_{n=1}^\infty c_nf(s_n).$$
 
 
 
@@ -1042,3 +1046,15 @@ A **trigonometric polynomial** is a finite sum of the form
 $f(x) = a_0 + \sum\limits_{n=1}^N(a_n\cos nx + b_n\sin nx)$ (x real),
 
 where $a_0,...,a_N,b_1,...,b_N$ are complex numbers. On account of the identities
+
+
+
+
+
+# 11 The Lebesgue Theory
+
+## Measure Spaces
+
+
+### 11.12 Definition
+Suppose $X$ is a set, not necessarily a subset of a euclidean space, or indeed of any metric space. $X$ is said to be a **measure space** if there exists a $\sigma$-ring $\mathfrak{M}$ of subsets of $X$ (which are called measurable sets) and a non-negative countably additive set function $\mu$ (which is called a measure), defined on $\mathfrak{M}$.
