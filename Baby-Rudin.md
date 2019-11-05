@@ -1053,6 +1053,29 @@ where $a_0,...,a_N,b_1,...,b_N$ are complex numbers. On account of the identitie
 
 # 11 The Lebesgue Theory
 
+
+## Set Functions
+
+### 11.1 Difinition
+A family $\mathscr{R}$ of sets is called a **ring** if $A \in \mathscr{R}$ and $B \in \mathscr{R}$ implies
+$$ A \cup B \in \mathscr{R}, A - B \in \mathscr{R}$$
+Since $A \cap B = A - (A - B)$, we also have $A \cap B \in \mathscr{R}$ if $\mathscr{R}$ is a ring.
+
+A ring $\mathscr{R}$ is called a **$\sigma$-ring** if
+$$\bigcup_{n=1}^\infty A_n \in \mathscr{R}$$
+whenever $A_n \in \mathscr{R}(n = 1, 2, 3, ...)$. Since
+$$\bigcap_{n=1}^\infty = A_1 - \bigcup_{n=1}^\infty(A_1-A_n)$$
+we also have
+$$\bigcap_{n=1}^\infty A_n \in \mathscr{R}$$
+if $\mathscr{R}$ is a $\sigma$-ring.
+
+### 11.2 Definition
+We say that $\phi$ is a **set function** defined on $\mathscr{R}$ if $\phi$ assigns to every $A \in \mathscr{R}$ a number $\phi(A)$ of the extended real number system. $\phi$ is **additive** if $A \cap B = 0$ implies
+$$\phi(A \cup B) = \phi(A) + \phi(B)$$
+and $\phi$ is **countably additive** if $A_i \cap A_j = 0 (i \ne j)$ implies
+$$\phi(\bigcup_{n=1}^\infty A_n) = \sum_{n=1}^\infty \phi(A_n)$$
+
+
 ## Measure Spaces
 
 
