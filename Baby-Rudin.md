@@ -722,7 +722,7 @@ Then there exist point $p, q \in X$ such that $f(p) = M$ and $f(q) = m$.
 ### 4.18 Definition
 Let $f$ be a mapping of metric space $X$ into a metric space $Y$. We say that $f$ is **uniformly continuous** on $X$ if for every $\epsilon > 0$ there exists $\delta > 0$ such that
 
-**(equation 4.15)**
+**(Equation 4.15)**
 $$ d_Y(f(p), f(q)) < \epsilon $$
 for all $p$ and $q$ in $X$ for which $d_X(p, q) < \delta$.
 
@@ -937,7 +937,7 @@ $$ \underline{\int}_a^bfd\alpha \le \overline{\int}_a^bfd\alpha $$
 
 ### 6.6 Theorem
 $f \in \mathscr{R}(\alpha)$ on $[a, b]$ if and only if for every $\epsilon > 0$ there exists a partition $P$ such that
-**(equation 6.13)**
+**(Equation 6.13)**
 $$ U(P, f, \alpha) - L(P, f, \alpha) < \epsilon $$
 
 
@@ -1076,8 +1076,87 @@ and $\phi$ is **countably additive** if $A_i \cap A_j = 0 (i \ne j)$ implies
 $$\phi(\bigcup_{n=1}^\infty A_n) = \sum_{n=1}^\infty \phi(A_n)$$
 
 
+## Construction of the Lebesgue Measure
+
+
+### 11.4 Definition
+Let $R^p$ denote $p$-dimensional eculidean space. By an **interval** in $R^p$ we mean the set of points $\mathbf{x} = (x_1,...,x_p)$ such that
+$$a_i \le x_i \le b_i \hspace{10pt} (i = 1,...,p)$$
+or the set of points which is characterized by equation with any or all of the signs replaced by $<$. The possibility that $a_i = b_i$ for any value of $i$ is not ruled out; in particular, the empty set is included among the intervals.
+
+If $A$ is the union of a finite number of intervals, $A$ is said to be an **elementary set**.
+
+If $I$ is an interval, we define
+$$m(I) = \Pi_{i=1}^p (b_i - a_i)$$
+not matter whether equality is included or excluded.
+
+If $A = I_1 \cup ... \cup I_n$, and if these intervals are pairwise disjoint, we set
+$$m(A) = m(I_1) + ... + m(I_n)$$
+we let $\mathscr{E}$ denote the family of all elementary subsets of $R^p$.
+
+At this point, the following properties should be verified:
+* $\mathscr{E}$ is a ring, but not a $\sigma$-ring.
+* if $A \in \mathscr{E}$, then $A$ is the union of a finite number of **disjoint** intervals.
+* If $A \in \mathscr{E}$, $m(A)$ is well defined by equation above; that is, if two different decompositions of $A$ into disjoint intervals are used, each gives rise to the same value of $m(A)$.
+* $m$ is additive on $\mathscr{E}$.
+
+### 11.5 Definition
+A nonnegative additive set function $\phi$ defined on $\mathscr{E}$ is said to be **regular** if the follwing is true: To every $A \in \mathscr{E}$ and to every $\epsilon > 0$ there exist sets $F \in \mathscr{E}$, $G \in \mathscr{E}$ such that $F$ is closed, $G$ is open, $F \subset A \subset G$, and
+$$\phi(G) - \epsilon \le \phi(A) \le \phi(F) + \epsilon$$
+
+
 ## Measure Spaces
 
 
 ### 11.12 Definition
 Suppose $X$ is a set, not necessarily a subset of a euclidean space, or indeed of any metric space. $X$ is said to be a **measure space** if there exists a $\sigma$-ring $\mathfrak{M}$ of subsets of $X$ (which are called measurable sets) and a non-negative countably additive set function $\mu$ (which is called a measure), defined on $\mathfrak{M}$.
+
+If, in addition, $X \in \mathfrak{M}$, then $X$ is said to be a **measurable space**.
+
+
+## Measurable Functions
+
+
+### 11.13 Definition 
+Let $f$ be a function defined on the measurable space $X$, with values in the extended real number system. The function $f$ is said to be **measurable** if the set
+$$\{x|f(x)>a\}$$
+is measurable for every real $a$.
+
+
+## Simple Functions
+
+
+### 11.19 Definition
+Let $s$ be a real-valued function defined on $X$. If the range of $s$ is finite, we say that $s$ is a **simple function**.
+
+Let $E \in X$, and put
+$$K_E(x) = \begin{cases}1\hspace{10pt}(x \in E),\\0\hspace{10pt}(x \notin E).\end{cases}$$
+$K_E$ is called the **characteristic function** of $E$.
+
+Suppose the range of $s$ consists of the distinct numbers $c_1, ..., c_n$. Let
+$$E_i = {s|s(x) = c_i} (i = 1, ..., n)$$
+Then
+$$s=\sum_{n=1}^n c_i K_{E_i}$$
+that is, every simple function is a finite linear combination of characteristic functions. It is clear that $s$ is measurable if and only if the sets $E_1, ..., E_n$ are measurable.
+
+
+
+## Integration
+
+
+### 11.21 Definition
+Suppose
+$$s(x) = \sum_{i=1}^n c_i K_{E_i}(x) (x \in X, c_i > 0)$$
+is measurable, and suppose $E \in \mathfrak{M}$. We define
+$$I_E(s) = \sum_{i=1}^n c_i\mu(E \cap E_i)$$
+If $f$ is measurable and nonnegative, we define
+
+**(Equation 11.1)** 
+$$\int_E fd\mu = \sup I_E(s)$$
+where the sup is taken over all measurable simple functions $s$ such that $0 \le s \le f$.
+
+The left member of (equation 11.1) is called the **Lebesgue integral** of $f$, with respect to the measure $\mu$, over the set $E$. It should be noted that the integral may have the value $+\infty$.
+
+It is easily verified that
+$$\int_E sd\mu = I_E(s)$$
+for every nonnegative simple measurable function $s$.
